@@ -1,0 +1,398 @@
+:root {
+  --azul: #12356b;
+  --azul2: #1e5799;
+  --dorado: #d7b56d;
+  --fondo: #f3f7fc;
+  --texto: #253247;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--texto);
+  line-height: 1.7;
+  background: white;
+}
+
+header {
+  background: var(--azul);
+  color: white;
+  padding: 20px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.logo small {
+  display: block;
+  font-size: 10px;
+  color: var(--dorado);
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--dorado);
+}
+
+.hero {
+  padding: 75px 8%;
+  background: linear-gradient(135deg, #12356b, #2877b9);
+  color: white;
+}
+
+.etiqueta {
+  color: var(--dorado);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 5vw, 54px);
+  line-height: 1.2;
+  margin: 15px 0;
+  max-width: 750px;
+}
+
+.hero p {
+  max-width: 650px;
+  margin-bottom: 24px;
+}
+
+section {
+  padding: 60px 8%;
+}
+
+.fondo {
+  background: var(--fondo);
+}
+
+h2 {
+  color: var(--azul);
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  color: var(--azul);
+}
+
+.intro {
+  color: #607086;
+  margin-bottom: 28px;
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.tarjeta {
+  display: block;
+  padding: 25px;
+  background: white;
+  border: 1px solid #dce5f0;
+  border-top: 4px solid var(--dorado);
+  border-radius: 8px;
+  color: var(--texto);
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta:hover,
+.tarjeta:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px #12356b20;
+}
+
+.icono {
+  font-size: 35px;
+}
+
+.tarjeta h3 {
+  margin: 8px 0;
+}
+
+.boton {
+  display: inline-block;
+  background: var(--dorado);
+  color: var(--azul);
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  margin: 8px 5px 0 0;
+}
+
+.boton:hover,
+.boton:focus {
+  background: #edce8d;
+}
+
+.consejo {
+  margin-top: 25px;
+  background: #e4effb;
+  border-left: 5px solid var(--azul2);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+details {
+  background: white;
+  border: 1px solid #dce5f0;
+  border-radius: 7px;
+  padding: 15px;
+  margin: 12px 0;
+}
+
+summary {
+  cursor: pointer;
+  color: var(--azul);
+  font-weight: bold;
+}
+
+#pregunta {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  margin-top: 20px;
+  border: 1px solid #dce5f0;
+}
+
+#resultado {
+  margin-top: 18px;
+  font-weight: bold;
+}
+
+footer {
+  background: #0b2348;
+  color: white;
+  padding: 30px 8%;
+  text-align: center;
+}
+
+footer h3 {
+  color: white;
+}
+
+footer p {
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 18px 5%;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  section {
+    padding: 42px 6%;
+  }
+}
+
+/* ===== MEJORAS VISUALES: CIBERSEGUROS ===== */
+
+/* Animación suave para la presentación */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background-size: 200% 200%;
+  animation: fondoBrillante 10s ease infinite;
+}
+
+@keyframes fondoBrillante {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Efectos en las tarjetas */
+.tarjeta {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px #12356b0d;
+}
+
+.tarjeta:hover,
+.tarjeta:focus-visible {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 14px 28px #12356b25;
+  border-top-color: var(--azul2);
+}
+
+.icono {
+  display: inline-block;
+  transition: transform 0.35s ease;
+}
+
+.tarjeta:hover .icono,
+.tarjeta:focus-visible .icono {
+  transform: scale(1.2) rotate(-5deg);
+}
+
+/* Imágenes educativas */
+.imagen-educativa {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 18px 0;
+  box-shadow: 0 6px 18px #12356b18;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.imagen-educativa:hover {
+  transform: scale(1.025);
+  box-shadow: 0 12px 26px #12356b30;
+}
+
+/* Nuevas tarjetas informativas */
+.tarjetas-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  margin-top: 28px;
+}
+
+.tarjeta-info {
+  background: white;
+  padding: 22px;
+  border: 1px solid #dce5f0;
+  border-radius: 12px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tarjeta-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px #12356b20;
+}
+
+.tarjeta-info .simbolo {
+  font-size: 38px;
+  margin-bottom: 8px;
+}
+
+.tarjeta-info h3 {
+  margin-bottom: 8px;
+}
+
+/* Elementos que JavaScript mostrará al desplazarse */
+.revelar {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.revelar.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Accesibilidad: respetar a quien prefiere menos animaciones */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .revelar {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Mejoras de accesibilidad y pantallas pequeñas */
+button:focus-visible,
+a:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #d7b56d;
+  outline-offset: 4px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+@media (max-width: 600px) {
+  nav {
+    width: 100%;
+  }
+
+  nav a {
+    padding: 5px 0;
+  }
+
+  .hero {
+    padding: 48px 6%;
+  }
+
+  .hero h1 {
+    overflow-wrap: break-word;
+  }
+}
+
+/* Barra de progreso del quiz */
+.barra-progreso {
+  width: 100%;
+  height: 12px;
+  margin: 0 0 24px;
+  background: #dce5f0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+#avance {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #1e5799, #d7b56d);
+  border-radius: inherit;
+  transition: width 0.35s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #avance {
+    transition: none;
+  }
+}

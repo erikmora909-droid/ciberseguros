@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ciberseguros | Quiz</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="juego.js" defer></script>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="index.html"
+     style="color:white;text-decoration:none">
+    🛡️ CIBERSEGUROS
+    <small>PEQUEÑOS EXPLORADORES DIGITALES</small>
+  </a>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="aprende.html">Aprende</a>
+    <a href="consejos.html">Consejos</a>
+    <a href="juego.html">Quiz</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <span class="etiqueta">LECCIÓN 03 · ¡A JUGAR!</span>
+    <h1>¡Demuestra lo que sabes!</h1>
+    <p>Responde cinco preguntas y conviértete
+    en un explorador digital experto.</p>
+    
+<div
+  class="barra-progreso"
+  role="progressbar"
+  aria-label="Progreso del cuestionario"
+  aria-valuemin="0"
+  aria-valuemax="5"
+  aria-valuenow="0"
+  id="barraProgreso"
+>
+  <div id="avance"></div>
+</div>
+
+  </section>
+
+  <section>
+    <h2>🎮 Quiz de ciberseguridad</h2>
+    <p id="progreso" class="intro">Pregunta 1 de 5</p>
+
+    <div id="pregunta">
+      <h3 id="textoPregunta"></h3>
+      <div id="opciones"></div>
+      <p id="resultado" aria-live="polite"></p>
+      <button id="siguiente" class="boton" hidden>
+        Siguiente pregunta →
+      </button>
+    </div>
+
+    <a class="boton" href="index.html">← Volver al inicio</a>
+  </section>
+</main>
+
+<footer>
+  <h3>🛡️ CIBERSEGUROS</h3>
+  <p>¡Aprende, protégete y navega con seguridad!</p>
+</footer>
+
+</body>
+</html>
